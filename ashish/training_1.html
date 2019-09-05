@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <script src="https://unpkg.com/vue"></script>
+    </head>
+    <body>
+        <div id="example1">
+            <p>{{name[4]}}</p>
+            <p>{{colors.color4}}</p>
+            <p>{{employees[3].name}}</p>
+            <p>{{employees[3].salary}}</p>
+            <p>{{employees[3].experience}}</p>
+        </div>
+    </body>
+    <script>
+        new Vue({
+            el:'#example1',
+            data:{
+                name:['Rajesh','Suresh','Kamlesh','Alpesh','Vaghresh'],
+                colors:{
+                    color1:'red',
+                    color2:'green',
+                    color3:'blue',
+                    color4:'blue',
+                },
+                employees:[
+                    {
+                        name:'Suresh',
+                        salary: 500,
+                        experience: '2 years'
+                    },
+                    {
+                        name:'Paresh',
+                        salary: 1500,
+                        experience: '3 years'
+                    },
+                    {
+                        name:'Bhavesh',
+                        salary: 2000,
+                        experience: '4 years'
+                    },
+                    {
+                        name:'Jayesh',
+                        salary: 2500,
+                        experience: '5 years'
+                    },
+                ]
+            }
+        })
+    </script>
+</html>
