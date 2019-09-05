@@ -1,0 +1,45 @@
+<html>
+  <head>
+        <script src="https://unpkg.com/vue"></script>
+  </head>  
+  <body>
+    <!-- <div id="example">
+      <p>{{ name1 }}</p>
+      <p>{{name2}}</p>
+      <p>{{persondetail[0].name}}</p>
+      <p>{{persondetail[0].birthdate}}</p> 
+      <p>{{colors[2]}}</p>            
+    </div>  -->
+    <div id="app-2">
+        <span v-bind:title="message">
+            {{mymessage}}
+        </span>
+        <a v-bind:href="linkvar">google.com</a>
+    </div>  
+    <script>        
+        /*new Vue({
+            el: '#example',
+            data: {
+                name1: "Hello Sameer",
+                name2: "Hello Ashish",
+                colors: ['red','green','blue'],
+                persondetail: [{
+                    name: "Sandip",
+                    birthdate: "24-Oct",                    
+                },{
+                    name: "Ashish",
+                    birthdate: "18-Oct",                    
+                }]
+            }
+        })*/
+       new Vue({
+           el: '#app-2',
+           data: {
+              message: "Hi sammer How are you?",
+              mymessage: "India won the match",
+              linkvar: "http://www.yahoo.com" 
+           }
+       })     
+    </script>
+  </body>
+</html>
