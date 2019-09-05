@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <script src="https://unpkg.com/vue"></script>
+    </head>
+    <body>
+        <div id="arraydetail">
+            <h3>Array Practice</h3>
+            <p>{{namelist[5]}}</p>
+            <hr>
+            <h3>Object Practice</h3>
+            <p>{{colorname.color5}}</p>
+            <hr>
+            <h3>Array Nested Object</h3>
+            <p>{{employeeDetail[3].eName}}</p>
+            <p>{{employeeDetail[3].eSalary}}</p>
+            <p>{{employeeDetail[3].eExp}}</p>
+            <hr>
+            <h3>V Bind</h3>
+            <p><a v-bind:href="urlname" v-bind:title="linkTitle" v-bind:target="linkTaget">Please Visit Site</a></p>
+            <p><img v-bind:src="imgUrl" v-bind:title="imgTitle" v-bind:alt="imageName" v-bind:width="imgWidth" v-bind:height="imgHeight" /></p>
+            
+        </div>
+        <script>
+            new Vue({
+                el: "#arraydetail",
+                data : {
+                    namelist: ["Akash", "Vishal", "jay", "Ravi", "Ashish", "Sandip", "Sameer", "Umesh"],
+                    
+                    colorname: {
+                        color1: "red",
+                        color2: "Blue",
+                        color3: "Green",
+                        color4: "Yellow",
+                        color5: "Violet",
+                        color6: "Orange"
+                    },
+                    employeeDetail: [
+                        {
+                            eName:'Subham',
+                            eSalary:10000,
+                            eTech:'Laravel',
+                            eExp:'1 Year'
+                        },
+                        {
+                            eName:'Ajay',
+                            eSalary:12000,
+                            eTech:'PHP',
+                            eExp:'2 Year'
+                        },
+                        {
+                            eName:'Raju',
+                            eSalary: 20000,
+                            eTech:'Ionic',
+                            eExp:'3 Year'
+                        },
+                        {
+                            eName:'Ketan',
+                            eSalary: 22000,
+                            eTech:'WordPress',
+                            eExp:'5 Year'
+                        },
+                        {
+                            eName:'Krunal',
+                            eSalary: 21000,
+                            eTech:'Joomla',
+                            eExp:'5 Year'
+                        }
+                    ],
+                    urlname :"http://google.com",
+                    linkTitle:"open url for browse",
+                    imgUrl:"https://hackernoon.com/hn-images/1*ACR0gj0wbx91V_xgURifWg.png",
+                    linkTaget:"_blank",
+                    imageName: "VueJS" ,
+                    imgTitle:"Vue Logo" ,
+                    imgWidth:"300px",
+                    imgHeight:"auto",
+
+                }
+            })
+        </script>
+    </body>
+</html>
