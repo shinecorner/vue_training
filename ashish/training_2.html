@@ -1,0 +1,28 @@
+<html>
+    <head>
+            <script src="https://unpkg.com/vue"></script>
+    </head>
+    <body>
+        <div id="exce-1">
+            <input type="text" name="age" v-model="age" />
+            <br/>
+            <span v-if="(age != 0) && (age < 18)">
+                You are child, Your Journey Free.
+            </span>
+            <span v-else-if="(age > 18) && (age <= 60)">
+                Your are Young , Please Collect Your Ticket and go for Journey
+            </span>
+            <span v-else-if="age != ''">
+                Your are Senior Citizan , Please Collect Your Half Ticket and go for Journey.
+            </span>
+        </div>
+    </body>
+    <script>
+        new Vue({
+            el: "#exce-1",
+            data:{
+                age:25
+            },
+        })
+    </script>
+</html>
