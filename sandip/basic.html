@@ -10,12 +10,22 @@
       <p>{{persondetail[0].birthdate}}</p> 
       <p>{{colors[2]}}</p>            
     </div>  -->
-    <div id="app-2">
+    <!-- <div id="app-2">
         <span v-bind:title="message">
             {{mymessage}}
         </span>
         <a v-bind:href="linkvar">google.com</a>
-    </div>  
+    </div>   -->
+    <!-- <div id="app-3">
+        <input type="text" name="age" v-bind:value="age" />
+        <input type="text" name="age" v-model="age" />
+        <br />
+        <span v-if="gender == 'male'">{{message}}</span>
+        <br />
+        <div v-if="age < 18">You are child, free to journy</div>
+        <div v-else-if="(age >= 18) && (age < 60)">You are Young, Full ticket for journy</div>
+        <div v-else>You are senior citizen, half ticket for journy</div>        
+    </div> -->
     <script>        
         /*new Vue({
             el: '#example',
@@ -32,14 +42,44 @@
                 }]
             }
         })*/
-       new Vue({
-           el: '#app-2',
+       /*new Vue({
+           el: '#app-2',e
            data: {
-              message: "Hi sammer How are you?",
-              mymessage: "India won the match",
+              message: 'You loaded this page on ' + new Date().toLocaleString(),
+              mymessage: new Date().toLocaleString(),
               linkvar: "http://www.yahoo.com" 
            }
-       })     
+       })*/   
+       /*new Vue({
+           el: "#app-3",
+           data: {
+            message: "Computer",
+            gender: "male",
+            age: 68,
+            emp_age: 25,
+            is_show: false
+           }
+       })*/  
+    //    var i = 100;
+    //    var sum = i + i;
+    //    document.write(sum);
+    //    var j = 4;
+    //    var sum = (i+j);
+    //    sum = 9;
+    //    document.write(sum);
+       //var sum = sum + 1;
+       
+       //document.write(sum++);  
+       /*document.write(sum++);
+       document.write('<br>');
+       document.write(sum);*/
+       var sum = 0;
+       for(i=1; i<=5; i++){
+           sum = (sum + i);
+        //    document.write('<br>');
+       }
+       document.write(sum); 
+       //document.write(sum);        
     </script>
   </body>
 </html>
