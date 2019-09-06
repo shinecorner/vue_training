@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <script src="https://unpkg.com/vue"></script>
+    </head>
+    <body>
+        <div id="excercies2">
+            <label>AGE</label>
+            <p><input type="text" v-bind:value="age" /></p>
+            <p><input type="text" v-model="age" /></p>
+            <p v-if="age < 18">You are eligible for free Journey</p>
+            <p v-else-if="age >= 18 && age < 60">Please Purchase Ticket for Journey</p>
+            <p v-else>Please Purchase Half Ticket for Journey</p>
+        </div>
+        <script>
+            new Vue({
+                el:"#excercies2",
+                data : {
+                    age:25
+                }
+            })
+        </script>
+    </body>
+</html>
